@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Appointment</title>
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/fontAwesome.css">
+        <link rel="stylesheet" href="css/hero-slider.css">
+        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/datepicker.css">
+        <link rel="stylesheet" href="css/templatemo-style.css">
+
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    </head>
+
+<body>
+    <div class="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <button id="primary-nav-button" type="button">Menu</button>
+                        <a href="index.html"><div class="logo">
+                            <img src="./images/logo1.png" alt="Venue Logo">
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+ 
+     <!--<section id="video-container">
+        <div class="video-overlay"></div>
+        <div class="video-content">
+            
+        </div> 
+        <video width="640" height="360" controls>-->
+            <iframe class="player" 
+            src="https://www.youtube.com/embed/KaDgaVzI5mg?si=kzPRKtaTdmJXnGdO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </section>
+
+    <section class="banner" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="banner-caption">
+                        <div class="line-dec"></div>
+                        <b><h3>Hello! I'm </h3>
+                        <h1><u>Evangelin Gladin</h1></b></u>
+                        <b><span>Author , Entreprenuer , Life Strategic Coach.</span><br>
+                        <span>We Are Empowering Bussiness..</span><br>
+                        <span>Discover the Keys to Sales Success with "Beyond Selling" Embrace a Revolutionary Selling Methodology That Turns Rejections into Resounding Affirmatives!</span></b>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class = "last">
+            
+            <div class = "card-container">
+
+                <div class = "card-content">
+                    <h3>Make An Appointment</h3>
+                    <form action="db.php" method="post">
+                        <div class = "form-row-1">
+                          
+                          <input type="date" id="selectedDate" name="date" required>
+                        </div> 
+                        <div class = "form-row-2">
+                           
+                            <select id="selectedTime" name="time" required>
+                                <option value="10:00 ">10:00 - 11:00 IST</option>
+                                <option value="12:00 ">12:00 - 13:00 IST</option>
+                                <option value="14:00 ">14:00 - 15:00 IST</option>
+                              </select>
+                        </div> 
+
+                        <div class = "form-row">
+                            <input type = "text" placeholder="Full Name" name="name" required>
+                            <input type = "phone" placeholder="Phone Number" name="phone" required>
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "email" placeholder="Email" name="email" required>
+                            <input type = "submit" value = "Book A Meeting">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+<script>
+        // Check for success query parameter in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const success = urlParams.get('success');
+
+        if (success === 'true') {
+            // Display a success message using JavaScript alert
+            alert('Thank you for this Appointment . Our Team Will Contact you soon');
+        }
+    </script>
+
+</body>
+</html>
